@@ -1,0 +1,27 @@
+/* @media (min-width: 1025px) {
+    .container {
+        margin: 0 20%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0 10%;
+    }
+}
+
+@media (max-width:768px){
+    .container {
+        margin: 0 0%;
+    }
+} */
+
+
+.width-handler{
+    margin:0 3%;
+}
+
+.selection-tab-handler{
+    margin: 1% 0;
+}
+
