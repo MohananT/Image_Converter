@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import AppBar from '../AppBar/AppBar';
 import SelectionTabs from '../SelectionTab/SelectionTab';
-
+import Uploader from '../Uploader/Uploader';
 
 import './App.css';
 
@@ -20,12 +20,15 @@ class App extends Component {
           <div className="selection-tab-handler">
             <SelectionTabs />
           </div>
-          <Grid container spacing={0} justify="center">
-            <Grid item xs={6}>
-              Upload
+          <Grid container spacing={0} justify="center" className="card">
+            <Grid item xs={5}>
+              <Uploader />
             </Grid>
-            <Grid item xs={6}>
-              View
+            <Grid item xs={1}>
+              
+            </Grid>
+            <Grid item xs={5}>
+              
             </Grid>
           </Grid>
         </div>

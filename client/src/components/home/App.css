@@ -17,11 +17,15 @@
 } */
 
 
-.width-handler{
+.width-handler {
     margin:0 3%;
 }
 
-.selection-tab-handler{
+.selection-tab-handler {
     margin: 1% 0;
 }
 
+.card {
+    height: 70vh;
+    background: #fafafa;
+}
