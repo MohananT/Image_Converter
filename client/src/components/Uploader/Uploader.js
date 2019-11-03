@@ -1,20 +1,12 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
-import Card from '@material-ui/core/Card';
+import PropTypes from 'prop-types';
 
-const useStyles = makeStyles({
-    
-})
-
-
-function Uploader() {
-    const classes = useStyles();
-    return (
-        <div>
-            
-        </div>
-
-    )
+class Uploader extends React.Component{
+    render() {
+        return (
+            <div>Upload</div>
+        )
+    }
 }
 
 

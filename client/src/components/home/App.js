@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import AppBar from '../AppBar/AppBar';
 import SelectionTabs from '../SelectionTab/SelectionTab';
 import Uploader from '../Uploader/Uploader';
+import Accordion from '../Accordion/Accordion';
 
 import './App.css';
 
@@ -21,6 +22,8 @@ class App extends Component {
             <SelectionTabs />
           </div>
           <Grid container spacing={0} justify="center" className="card">
+            {/* accordion to enable image processing mechanism */}
+            <Accordion />
             <Grid item xs={5}>
               <Uploader />
             </Grid>
