@@ -1,5 +1,22 @@
 .accordion {
     width: 100%;
-    border: 1px solid gray;
-    height: 5vh;
+    height: 6vh;
+    border-bottom: 1px solid #d4d4d4;
+    background: #eee;
+    line-height: 6vh;
+    transition: all 1s;
+}
+
+.accordion:hover {
+    cursor: pointer;
+}
+
+.accordion-content {
+    background: white;
+    display: none;
+    overflow: hidden;
+}
+
+.accordion-content-show {
+    display: block;
 }

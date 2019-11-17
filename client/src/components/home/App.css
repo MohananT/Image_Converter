@@ -35,3 +35,7 @@
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 500;
 }
+
+.accordion-full {
+    margin-bottom: 5px;
+}

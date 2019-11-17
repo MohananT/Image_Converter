@@ -21,9 +21,12 @@ class App extends Component {
           <div className="selection-tab-handler">
             <SelectionTabs />
           </div>
-          <Grid container spacing={0} justify="center" className="card">
-            {/* accordion to enable image processing mechanism */}
+          {/* accordion to enable image processing mechanism */}
+          <div className="accordion-full">
             <Accordion />
+          </div>
+          <Grid container spacing={0} justify="center" className="card">
+            
             <Grid item xs={5}>
               <Uploader />
             </Grid>
