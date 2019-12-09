@@ -1,0 +1,16 @@
+.card-image {
+    width: 95%;
+}
+
+.card-image button {
+    margin-bottom: 10px;
+}
+
+.card-image-holder {
+    border:1px dashed gray;
+    height: 62vh;
+}
+
+.card-image-button {
+    width: 100%;
+}

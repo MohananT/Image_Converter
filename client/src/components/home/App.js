@@ -18,9 +18,9 @@ class App extends Component {
         <div className="width-handler">
           {/* selection buttons */}
           {/* 1. Image to Text  2.Selected Image to Text */}
-          <div className="selection-tab-handler">
+          {/* <div className="selection-tab-handler">
             <SelectionTabs />
-          </div>
+          </div> */}
           {/* accordion to enable image processing mechanism */}
           <div className="accordion-full">
             <Accordion />
@@ -31,7 +31,7 @@ class App extends Component {
               <Uploader />
             </Grid>
             <Grid item xs={1}>
-              
+              <button>Convert</button>
             </Grid>
             <Grid item xs={5}>
               

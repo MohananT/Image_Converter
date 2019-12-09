@@ -23,7 +23,7 @@ class Accordion extends Component {
     render() {
         return (
             <div>
-                <div className="accordion font-style" onClick={this.toggleAccordion}>Tinker Image</div>
+                <div className="accordion font-style" onClick={this.toggleAccordion}>Image Processing</div>
                 <div className={this.state.active ? "accordion-content-show" : "accordion-content"}>
                     Image Processing content
                 </div>

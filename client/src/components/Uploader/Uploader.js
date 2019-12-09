@@ -1,10 +1,36 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import "./Uploader.css";
 
 class Uploader extends React.Component{
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            file: null
+        }
+
+        this.onChangeHandler = this.onChangeHandler.bind(this);
+    }
+
+    onChangeHandler = (event) => {
+        console.log('File', event.target.files[0]);
+
+        this.setState({
+            file: event.target.files[0]
+        })
+
+        console.log('File', this.state.file);
+    }
+
     render() {
         return (
-            <div>Upload</div>
+            <div className="card-image">
+                <input type="file" name="Add Image" className="card-image-button" onChange={this.onChangeHandler}/>
+                <div className="card-image-holder">
+
+                </div>
+            </div>
         )
     }
 }

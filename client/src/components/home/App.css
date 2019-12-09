@@ -18,7 +18,7 @@
 
 
 .width-handler {
-    margin:0 3%;
+    margin:1% 2%;
 }
 
 .selection-tab-handler {
@@ -38,4 +38,8 @@
 
 .accordion-full {
     margin-bottom: 5px;
+}
+
+.card{
+    border: 1px solid gray;
 }
