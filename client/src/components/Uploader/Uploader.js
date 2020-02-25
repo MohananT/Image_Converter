@@ -7,10 +7,10 @@ class Uploader extends React.Component{
         super(props);
 
         this.state = {
-            file: null
+            file: null,
+            imgSrc: null
         }
 
-        this.onChangeHandler = this.onChangeHandler.bind(this);
     }
 
     onChangeHandler = (event) => {
@@ -20,15 +20,26 @@ class Uploader extends React.Component{
             file: event.target.files[0]
         })
 
+        let reader = new FileReader();
+        reader.readAsDataURL(event.target.files[0]);
+        // console.log(reader.readAsDataURL(event.target.files[0]));
+        reader.onloadend = (e) => {
+            this.setState({
+                imgSrc: [reader.result]
+            })
+        }
+
         console.log('File', this.state.file);
     }
 
     render() {
+        const { file } = this.state;
         return (
             <div className="card-image">
-                <input type="file" name="Add Image" className="card-image-button" onChange={this.onChangeHandler}/>
+                <input type="file" name="Add Image" className="card-image-button" 
+                onChange={this.onChangeHandler}/>
                 <div className="card-image-holder">
-
+                    {file ? <img src={this.state.imgSrc} /> : null}
                 </div>
             </div>
         )
