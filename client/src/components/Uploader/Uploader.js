@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import "./Uploader.css";
 
 class Uploader extends React.Component{
@@ -32,6 +33,16 @@ class Uploader extends React.Component{
         console.log('File', this.state.file);
     }
 
+    uploadCheck = (event) => {
+        const formdata = new FormData();
+        formdata.append('file', this.state.file);
+        axios.post("http://localhost:5000/api/upload", formdata, {
+        })
+        .then(res => {
+            console.log(res.statusText);
+        })
+    }
+
     render() {
         const { file } = this.state;
         return (
@@ -41,6 +52,7 @@ class Uploader extends React.Component{
                 <div className="card-image-holder">
                     {file ? <img src={this.state.imgSrc} /> : null}
                 </div>
+                <button onClick={this.uploadCheck}>upload</button>
             </div>
         )
     }
