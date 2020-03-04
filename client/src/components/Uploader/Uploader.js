@@ -35,8 +35,12 @@ class Uploader extends React.Component{
 
     uploadCheck = (event) => {
         const formdata = new FormData();
+        const headers = {
+            'Authorization': `JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTW9oYW4iLCJwd2QiOiJtb2hhbiIsImlhdCI6MTU4MzI4NDg2OX0.1EKU6rPmbDoO50Vlxb1nGvAxxNCZzvenrxog1Wmm7w0`
+        }
         formdata.append('file', this.state.file);
         axios.post("http://localhost:5000/api/upload", formdata, {
+            headers: headers
         })
         .then(res => {
             console.log(res.statusText);

@@ -5,8 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var multer = require('multer');
 var cors = require('cors');
+const dotenv = require('dotenv').config();
 
-var convertRoute = require('./routes/convertRoute');
+var convertRoute = require('./routes/api_img2txt');
+var apijwt = require('./routes/api_jwt').router;
+var verifyToken = require('./routes/api_jwt').verifyToken;
 
 var app = express();
 
@@ -29,7 +32,7 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage }).single('file');
 
-app.post('/api/upload', function (req, res) {
+app.post('/api/upload', verifyToken, function (req, res) {
   upload(req, res, function (err) {
     if (err instanceof multer.MulterError) {
       return res.status(500).json(err)
@@ -41,6 +44,7 @@ app.post('/api/upload', function (req, res) {
 });
 
 app.use('/api/convertImgtoTxt', convertRoute);
+app.use('/api/token', apijwt);
 
 // middleware to catch error
 // catch 404 and forward to error handler
